@@ -17,7 +17,6 @@ class App extends Component {
 	};
 
 	handleSubmit = (newContact, { resetForm }) => {
-		console.log('gg');
 		const { contacts } = this.state;
 		const alreadyExist = contacts.find(
 			(contact) =>

@@ -1,6 +1,10 @@
+import PropTypes from 'prop-types';
+
 // import { ContactInput } from './Phonebook.styled';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+
+import { FormStyled, Label, ContactInput, Button } from './Phonebook.styled';
 
 const initialValues = {
 	name: '',
@@ -36,17 +40,17 @@ export const Phonebook = ({ onFormSubmit }) => {
 			validationSchema={schema}
 			onSubmit={onFormSubmit}
 		>
-			<Form>
-				<label htmlFor="name"></label>
-				<Field type="text" name="name" />
+			<FormStyled>
+				<Label htmlFor="name">Name</Label>
+				<ContactInput type="text" name="name" />
 				<ErrorMessage name={'name'}></ErrorMessage>
 
-				<label htmlFor="number"></label>
-				<Field type="tel" name="number" />
+				<Label htmlFor="number">Telephone</Label>
+				<ContactInput type="tel" name="number" />
 				<ErrorMessage name={'number'}></ErrorMessage>
 
-				<button type="submit">Add contact</button>
-			</Form>
+				<Button type="submit">Add contact</Button>
+			</FormStyled>
 		</Formik>
 	);
 };
