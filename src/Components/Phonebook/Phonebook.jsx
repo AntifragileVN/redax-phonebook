@@ -1,18 +1,22 @@
-import PropTypes from 'prop-types';
-
-// import { ContactInput } from './Phonebook.styled';
-import { Formik, Field, Form, ErrorMessage } from 'formik';
+import { useDispatch, useSelector } from 'react-redux';
+import { getContacts } from '../../redax/selectors';
+import { addContact } from '../../redax/contactsSlice';
+import { Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-
-import { FormStyled, Label, ContactInput, Button } from './Phonebook.styled';
+import {
+	FormStyled,
+	FieldWrapper,
+	Label,
+	ContactInput,
+	Button,
+} from './Phonebook.styled';
 
 const initialValues = {
 	name: '',
 	number: '',
 };
 
-const namePattern =
-	/^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/;
+const namePattern = /^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/;
 const phonePattern =
 	/\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/;
 
@@ -33,21 +37,47 @@ const schema = Yup.object().shape({
 		),
 });
 
-export const Phonebook = ({ onFormSubmit }) => {
+export const Phonebook = () => {
+	const contacts = useSelector(getContacts);
+	const dispatch = useDispatch();
+
+	const handleSubmit = (newContact, { resetForm }) => {
+		const alreadyExist = contacts.find(
+			(contact) => contact.name.toLowerCase() === newContact.name.toLowerCase()
+		);
+
+		if (alreadyExist) {
+			resetForm();
+			return alert('such name already exist');
+		}
+
+		dispatch(addContact(newContact.name, newContact.number));
+		resetForm();
+	};
+
 	return (
 		<Formik
 			initialValues={initialValues}
 			validationSchema={schema}
-			onSubmit={onFormSubmit}
+			onSubmit={handleSubmit}
 		>
 			<FormStyled>
-				<Label htmlFor="name">Name</Label>
-				<ContactInput type="text" name="name" />
-				<ErrorMessage name={'name'}></ErrorMessage>
+				<FieldWrapper>
+					<Label htmlFor="name">Name</Label>
+					<ContactInput
+						type="text"
+						name="name"
+						autoComplete="off"
+						placeholder="Tom Jhonson"
+					/>
+					<ErrorMessage name={'name'}></ErrorMessage>
+				</FieldWrapper>
 
-				<Label htmlFor="number">Telephone</Label>
-				<ContactInput type="tel" name="number" />
-				<ErrorMessage name={'number'}></ErrorMessage>
+				<FieldWrapper>
+					<Label htmlFor="number">Telephone</Label>
+					<ContactInput type="tel" name="number" placeholder="+28023456724" />
+					<ErrorMessage name={'number'}></ErrorMessage>
+				</FieldWrapper>
 
 				<Button type="submit">Add contact</Button>
 			</FormStyled>

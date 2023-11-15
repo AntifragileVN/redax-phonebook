@@ -1,37 +1,34 @@
 import styled from 'styled-components';
 import { Field, Form } from 'formik';
 
-const FormStyled = styled(Form)`
+export const FormStyled = styled(Form)`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	border: 1px solid rgb(0, 0, 0, 15%);
-	box-shadow: 0px 0px 5px rgb(0, 0, 0, 15%);
-	border-radius: 5px;
 
-	margin-bottom: 30px;
-	max-width: 450px;
-	padding: 25px 35px;
-	width: 600px;
-	hight: 300px;
+	width: 100%;
 `;
 
-const Label = styled.label`
+export const FieldWrapper = styled.div`
+	width: 100%;
+	margin-bottom: 10px;
+`;
+
+export const Label = styled.label`
+	display: block;
 	font-size: 18px;
 	font-weight: 500;
 `;
 
-const ContactInput = styled(Field)`
-	border: 2px solid rgb(0, 0, 0, 15%);
-	box-shadow: 0px 0px 5px rgb(0, 0, 0, 15%);
+export const ContactInput = styled(Field)`
+	border: 1px solid rgb(0, 0, 0, 35%);
 	border-radius: 5px;
-	margin-bottom: 10px;
-	max-width: 100%;
+	width: 100%;
 	padding: 5px 20px;
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
 	max-width: 100%;
 	padding: 5px 40px;
 	border: 1px solid rgb(0, 0, 0, 15%);
@@ -44,5 +41,3 @@ const Button = styled.button`
 	font-size: 18px;
 	font-weight: 500;
 `;
-
-export { FormStyled, Label, ContactInput, Button };

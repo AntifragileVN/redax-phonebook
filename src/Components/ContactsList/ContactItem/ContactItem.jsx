@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 import { ListItem } from './ContactItem.styled';
 
-export function ContactItem({ name, number, gender, id, onDeleteContact }) {
+export function ContactItem({ name, number, id, onDeleteContact }) {
 	return (
 		<ListItem>
-			{name}: {number} {gender}
+			<p>{name}</p>
+			<p>{number}</p>
+
 			<button onClick={() => onDeleteContact(id)}>Delete</button>
 		</ListItem>
 	);
@@ -13,5 +15,6 @@ export function ContactItem({ name, number, gender, id, onDeleteContact }) {
 ContactItem.propTypes = {
 	name: PropTypes.string,
 	number: PropTypes.string,
-	gender: PropTypes.string,
+	id: PropTypes.number.isRequired,
+	onDeleteContact: PropTypes.func.isRequired,
 };
