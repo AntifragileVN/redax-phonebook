@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from '../../redax/selectors';
-import { addContact } from '../../redax/contactsSlice';
+import { addContact } from 'redax/operations';
+// import { addContact } from '../../redax/contactsSlice';
+
 import { Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import {
@@ -51,7 +53,7 @@ export const Phonebook = () => {
 			return alert('such name already exist');
 		}
 
-		dispatch(addContact(newContact.name, newContact.number));
+		dispatch(addContact(newContact));
 		resetForm();
 	};
 
