@@ -2,12 +2,15 @@ import './App.css';
 import { Layout } from './Components/Layout/Layout';
 
 import { Routes, Route } from 'react-router-dom';
-import { LoginPage, RegisterPage, ContactsPage } from 'pages';
-import { Home } from 'pages/Home/Home';
 import { useAuth } from 'hooks';
 import { useDispatch } from 'react-redux';
 import { refreshUser } from 'redax/auth/operation';
-import { useEffect } from 'react';
+import { lazy, useEffect } from 'react';
+
+const HomePage = lazy(() => import('pages/Home/Home'));
+const LoginPage = lazy(() => import('pages/LoginPage/LoginPage'));
+const RegisterPage = lazy(() => import('pages/RegisterPage/RegisterPage'));
+const ContactsPage = lazy(() => import('pages/ContactsPage/ContactsPage'));
 
 export default function App() {
 	const dispatch = useDispatch();
@@ -20,7 +23,7 @@ export default function App() {
 	return isRefreshing ? null : (
 		<Routes>
 			<Route path="/" element={<Layout />}>
-				<Route index element={<Home />} />
+				<Route index element={<HomePage />} />
 				<Route path="register" element={<RegisterPage />} />
 				<Route path="login" element={<LoginPage />} />
 				<Route path="contacts" element={<ContactsPage />} />

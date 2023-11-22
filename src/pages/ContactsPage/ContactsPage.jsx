@@ -4,7 +4,7 @@ import { Section, SectionTitle } from 'Components/Layout/Layout.styled';
 import { Phonebook } from 'Components/Phonebook/Phonebook';
 import { useState } from 'react';
 
-export const ContactsPage = () => {
+const ContactsPage = () => {
 	const [filter, setFilter] = useState('');
 
 	const handleChange = (value) => {
@@ -25,3 +25,5 @@ export const ContactsPage = () => {
 		</>
 	);
 };
+
+export default ContactsPage;
