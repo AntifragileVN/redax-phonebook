@@ -5,7 +5,7 @@ import { getContacts, getIsLoading } from '../../redax/contacts/selectors';
 import { fetchContacts } from 'redax/contacts/operations';
 import { useEffect } from 'react';
 
-export function ContactList() {
+export function ContactList({ filter }) {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
@@ -15,15 +15,15 @@ export function ContactList() {
 	const isLoading = useSelector(getIsLoading);
 	const contacts = useSelector(getContacts);
 
-	// const filteredContacts = contacts.filter((contact) =>
-	// 	contact.name.toLowerCase().includes(filter)
-	// );
+	const filteredContacts = contacts.filter((contact) =>
+		contact.name.toLowerCase().includes(filter)
+	);
 
 	return (
 		<>
 			{isLoading && <h1>Whate a bit</h1>}
 			<List>
-				{contacts.map(({ id, name, number }) => (
+				{filteredContacts.map(({ id, name, number }) => (
 					<ContactItem
 						key={id}
 						id={id}
