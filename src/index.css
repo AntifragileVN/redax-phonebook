@@ -16,6 +16,15 @@ body {
 	line-height: 1.5;
 }
 
+html {
+	background: #212832;
+	color: white;
+}
+
+#root {
+	background: #212832;
+}
+
 h1,
 h2,
 h3,

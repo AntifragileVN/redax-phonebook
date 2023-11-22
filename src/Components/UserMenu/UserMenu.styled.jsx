@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 export const Menu = styled.nav`
 	display: flex;
 	align-items: center;
-	column-gap: 20px;
 `;
 
 export const StyledLink = styled(NavLink)`

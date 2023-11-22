@@ -1,7 +1,9 @@
+import { HomeWrapper } from './Home.styled';
+
 export const Home = () => {
 	return (
-		<div>
-			<h1>hello</h1>
-		</div>
+		<HomeWrapper>
+			<h1>Contacts app welcome page ☁️</h1>
+		</HomeWrapper>
 	);
 };
