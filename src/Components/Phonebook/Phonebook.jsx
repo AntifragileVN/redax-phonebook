@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { getContacts } from '../../redax/selectors';
-import { addContact } from 'redax/operations';
-// import { addContact } from '../../redax/contactsSlice';
+import { getContacts } from '../../redax/contacts/selectors';
+import { addContact } from 'redax/contacts/operations';
 
 import { Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';

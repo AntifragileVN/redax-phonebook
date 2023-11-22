@@ -10,8 +10,15 @@ export const Layout = styled.div`
 	justify-content: center;
 `;
 
+export const Container = styled.div`
+	max-width: 980px;
+	margin-left: 50%;
+	margin-right: 50%;
+`;
+
 export const Section = styled.section`
 	width: 100%;
+	min-width: 500px;
 	border-radius: 5px;
 	margin-bottom: 10px;
 	padding: 20px;
