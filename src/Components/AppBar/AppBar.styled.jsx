@@ -8,5 +8,5 @@ export const Header = styled.header`
 export const HeaderWrapper = styled.div`
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
+	justify-content: space-between;
 `;

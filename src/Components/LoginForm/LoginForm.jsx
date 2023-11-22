@@ -8,7 +8,7 @@ import {
 	StyledInput,
 	EmailIcon,
 	PasswordIcon,
-} from './LoginForm.styled';
+} from 'Components/Form/Form.styled';
 import { Button } from 'Components/Button/Button';
 
 export const LoginForm = () => {

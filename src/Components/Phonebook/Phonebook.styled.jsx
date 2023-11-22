@@ -2,42 +2,31 @@ import styled from 'styled-components';
 import { Field, Form } from 'formik';
 
 export const FormStyled = styled(Form)`
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
-	width: 100%;
+	background: #212832;
 `;
 
 export const FieldWrapper = styled.div`
-	width: 100%;
-	margin-bottom: 10px;
+	background: #455a64;
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-bottom: 25px;
 `;
 
 export const Label = styled.label`
-	display: block;
+	color: #8caab9;
 	font-size: 18px;
-	font-weight: 500;
+	margin-bottom: 15px;
 `;
 
 export const ContactInput = styled(Field)`
-	border: 1px solid rgb(0, 0, 0, 35%);
-	border-radius: 5px;
 	width: 100%;
-	padding: 5px 20px;
-`;
-
-export const Button = styled.button`
-	max-width: 100%;
-	padding: 5px 40px;
-	border: 1px solid rgb(0, 0, 0, 15%);
-	border-radius: 5px;
-	text-align: center;
-	background: rgb(76, 154, 255);
-	color: white;
-	cursor: pointer;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	padding-left: 40px;
+	border: none;
+	background: #455a64;
 
 	font-size: 18px;
-	font-weight: 500;
+	color: inherit;
 `;

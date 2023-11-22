@@ -8,9 +8,9 @@ import {
 	UserIcon,
 	EmailIcon,
 	PasswordIcon,
-} from './RegisterForm.styled';
+} from 'Components/Form/Form.styled';
+
 import { Button } from 'Components/Button/Button';
-import { CustomInput } from 'Components/CustomInput/CustomInput';
 
 export const RegisterForm = () => {
 	const dispath = useDispatch();
@@ -31,13 +31,6 @@ export const RegisterForm = () => {
 
 	return (
 		<Form onSubmit={handleSubmit} autoComplete="off">
-			{/* <CustomInput
-				type={'text'}
-				placeholder={'Ivan Dorn'}
-				id={'regName'}
-				name={'name'}
-			/> */}
-
 			<Label htmlFor="regName">Username</Label>
 			<InputWrapper>
 				<UserIcon />

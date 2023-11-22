@@ -13,4 +13,8 @@ export const StyledButton = styled.button`
 	font-size: 18px;
 	font-weight: 600;
 	line-height: 2.1;
+
+	&.contactDelete {
+		width: auto;
+	}
 `;

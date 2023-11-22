@@ -4,13 +4,10 @@ import { addContact } from 'redax/contacts/operations';
 
 import { Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import {
-	FormStyled,
-	FieldWrapper,
-	Label,
-	ContactInput,
-	Button,
-} from './Phonebook.styled';
+import { FormStyled, FieldWrapper, Label, ContactInput } from './Phonebook.styled';
+
+import { Button } from 'Components/Button/Button';
+import { UserIcon, PhoneIcon } from 'Components/Form/Form.styled';
 
 const initialValues = {
 	name: '',
@@ -63,22 +60,32 @@ export const Phonebook = () => {
 			onSubmit={handleSubmit}
 		>
 			<FormStyled>
-				<FieldWrapper>
+				<div>
 					<Label htmlFor="name">Name</Label>
-					<ContactInput
-						type="text"
-						name="name"
-						autoComplete="off"
-						placeholder="Tom Jhonson"
-					/>
+					<FieldWrapper>
+						<UserIcon />
+						<ContactInput
+							type="text"
+							name="name"
+							autoComplete="off"
+							placeholder="Tom Jhonson"
+						/>
+					</FieldWrapper>
 					<ErrorMessage name={'name'}></ErrorMessage>
-				</FieldWrapper>
+				</div>
 
-				<FieldWrapper>
+				<div>
 					<Label htmlFor="number">Telephone</Label>
-					<ContactInput type="tel" name="number" placeholder="+28023456724" />
+					<FieldWrapper>
+						<PhoneIcon />
+						<ContactInput
+							type="tel"
+							name="number"
+							placeholder="+28023456724"
+						/>
+					</FieldWrapper>
 					<ErrorMessage name={'number'}></ErrorMessage>
-				</FieldWrapper>
+				</div>
 
 				<Button type="submit">Add contact</Button>
 			</FormStyled>

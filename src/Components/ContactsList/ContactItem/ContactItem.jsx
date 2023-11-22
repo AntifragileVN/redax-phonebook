@@ -1,18 +1,22 @@
 import PropTypes from 'prop-types';
-import { ListItem } from './ContactItem.styled';
+import { ListItem, ItemInfo, PersonName, PhoneNumber } from './ContactItem.styled';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redax/contacts/operations';
+import { Button } from 'Components/Button/Button';
 
 export function ContactItem({ name, number, id }) {
 	const dispatch = useDispatch();
 
-	// console.log('item ID', id);
 	return (
 		<ListItem>
-			<p>{name}</p>
-			<p>{number}</p>
+			<ItemInfo>
+				<PersonName>{name}</PersonName>
+				<PhoneNumber>{number}</PhoneNumber>
+			</ItemInfo>
 
-			<button onClick={() => dispatch(deleteContact(id))}>Delete</button>
+			<Button className="contactDelete" onClick={() => dispatch(deleteContact(id))}>
+				Delete
+			</Button>
 		</ListItem>
 	);
 }
