@@ -7,6 +7,9 @@ export const Menu = styled.nav`
 `;
 
 export const UserName = styled.p`
+	display: inline-block;
+	font-weight: 600;
+	height: 100%;
 	margin-right: 15px;
 `;
 

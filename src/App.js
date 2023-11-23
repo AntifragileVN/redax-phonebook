@@ -1,6 +1,9 @@
 import './App.css';
 import { Layout } from './Components/Layout/Layout';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { Routes, Route } from 'react-router-dom';
 import { useAuth } from 'hooks';
 import { useDispatch } from 'react-redux';
@@ -24,34 +27,40 @@ export default function App() {
 	}, [dispatch]);
 
 	return isRefreshing ? null : (
-		<Routes>
-			<Route path="/" element={<Layout />}>
-				<Route index element={<HomePage />} />
-				<Route
-					path="register"
-					element={
-						<RestrictedRoute
-							redirectTo="/contacts"
-							component={<RegisterPage />}
-						/>
-					}
-				/>
-				<Route
-					path="login"
-					element={
-						<RestrictedRoute
-							redirectTo="/contacts"
-							component={<LoginPage />}
-						/>
-					}
-				/>
-				<Route
-					path="contacts"
-					element={
-						<PrivateRoute redirectTo="/login" component={<ContactsPage />} />
-					}
-				/>
-			</Route>
-		</Routes>
+		<>
+			<ToastContainer />
+			<Routes>
+				<Route path="/" element={<Layout />}>
+					<Route index element={<HomePage />} />
+					<Route
+						path="register"
+						element={
+							<RestrictedRoute
+								redirectTo="/contacts"
+								component={<RegisterPage />}
+							/>
+						}
+					/>
+					<Route
+						path="login"
+						element={
+							<RestrictedRoute
+								redirectTo="/contacts"
+								component={<LoginPage />}
+							/>
+						}
+					/>
+					<Route
+						path="contacts"
+						element={
+							<PrivateRoute
+								redirectTo="/login"
+								component={<ContactsPage />}
+							/>
+						}
+					/>
+				</Route>
+			</Routes>
+		</>
 	);
 }

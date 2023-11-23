@@ -27,7 +27,7 @@ export const ItemInfo = styled.div`
 
 export const PersonName = styled.p`
 	font-size: 20px;
-	font-weight: 500;
+	font-weight: 600;
 	line-height: 1.2;
 	margin-bottom: 5px;
 `;
@@ -35,6 +35,7 @@ export const PersonName = styled.p`
 export const PhoneNumber = styled.p`
 	font-size: 14px;
 	line-height: 1.2;
+	color: #c0bebe;
 `;
 
 export { ListItem };

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { toast } from 'react-toastify';
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
 
@@ -21,6 +22,16 @@ export const register = createAsyncThunk(
 
 			return result.data;
 		} catch (error) {
+			toast.error('Try again', {
+				position: 'bottom-right',
+				autoClose: 4000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				theme: 'dark',
+			});
 			return thunkAPI.rejectWithValue(error.message);
 		}
 	}
@@ -32,6 +43,16 @@ export const logIn = createAsyncThunk('users/login', async (credentials, thunkAP
 		token.setAuthHeader(result.data.token);
 		return result.data;
 	} catch (error) {
+		toast.error('Email or password is wrong', {
+			position: 'bottom-right',
+			autoClose: 4000,
+			hideProgressBar: false,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined,
+			theme: 'dark',
+		});
 		return thunkAPI.rejectWithValue(error.message);
 	}
 });
@@ -41,6 +62,17 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
 		await axios.post('users/logout');
 		token.clearAuthHeader();
 	} catch (error) {
+		toast.error('Something went wrong. Try again!', {
+			position: 'bottom-right',
+			autoClose: 4000,
+			hideProgressBar: false,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined,
+			theme: 'dark',
+		});
+
 		return thunkAPI.rejectWithValue(error.message);
 	}
 });

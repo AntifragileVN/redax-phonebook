@@ -32,16 +32,26 @@ export const LoginForm = () => {
 			<Label htmlFor="logEmail">Email</Label>
 			<InputWrapper>
 				<EmailIcon />
-				<StyledInput type="email" name="email" id="logEmail" />
+				<StyledInput
+					type="email"
+					name="email"
+					id="logEmail"
+					placeholder="example@domain.com"
+				/>
 			</InputWrapper>
 
 			<Label htmlFor="logPassword">Password</Label>
 			<InputWrapper>
 				<PasswordIcon />
-				<StyledInput type="password" name="password" id="logPassword" />
+				<StyledInput
+					type="password"
+					name="password"
+					id="logPassword"
+					placeholder="●●●●●●●●●●●●"
+				/>
 			</InputWrapper>
 
-			<Button type="submit">Register</Button>
+			<Button type="submit">Log in</Button>
 		</Form>
 	);
 };

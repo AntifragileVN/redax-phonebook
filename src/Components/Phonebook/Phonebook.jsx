@@ -14,6 +14,7 @@ import {
 
 import { Button } from 'Components/Button/Button';
 import { UserIcon, PhoneIcon } from 'Components/Form/Form.styled';
+import { toast } from 'react-toastify';
 
 const initialValues = {
 	name: '',
@@ -52,7 +53,16 @@ export const Phonebook = () => {
 
 		if (alreadyExist) {
 			resetForm();
-			return alert('such name already exist');
+			toast.error('Such name already exist', {
+				position: 'bottom-right',
+				autoClose: 4000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				theme: 'dark',
+			});
 		}
 
 		dispatch(addContact(newContact));
