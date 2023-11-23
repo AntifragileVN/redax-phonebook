@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/redax-phonebook/static/css/main.5b8d107c.css",
-    "main.js": "/redax-phonebook/static/js/main.84beb023.js",
+    "main.css": "/redax-phonebook/static/css/main.6a9f8af6.css",
+    "main.js": "/redax-phonebook/static/js/main.644d7baf.js",
     "static/js/485.a66186c9.chunk.js": "/redax-phonebook/static/js/485.a66186c9.chunk.js",
-    "static/js/981.7554f2c0.chunk.js": "/redax-phonebook/static/js/981.7554f2c0.chunk.js",
-    "static/js/886.7d639f44.chunk.js": "/redax-phonebook/static/js/886.7d639f44.chunk.js",
-    "static/js/613.63094d33.chunk.js": "/redax-phonebook/static/js/613.63094d33.chunk.js",
+    "static/js/981.6818e8eb.chunk.js": "/redax-phonebook/static/js/981.6818e8eb.chunk.js",
+    "static/js/886.529caadd.chunk.js": "/redax-phonebook/static/js/886.529caadd.chunk.js",
+    "static/js/613.28f49ae4.chunk.js": "/redax-phonebook/static/js/613.28f49ae4.chunk.js",
     "static/js/718.c1d6332b.chunk.js": "/redax-phonebook/static/js/718.c1d6332b.chunk.js",
     "static/js/568.4951a2b8.chunk.js": "/redax-phonebook/static/js/568.4951a2b8.chunk.js",
     "index.html": "/redax-phonebook/index.html",
-    "main.5b8d107c.css.map": "/redax-phonebook/static/css/main.5b8d107c.css.map",
-    "main.84beb023.js.map": "/redax-phonebook/static/js/main.84beb023.js.map",
+    "main.6a9f8af6.css.map": "/redax-phonebook/static/css/main.6a9f8af6.css.map",
+    "main.644d7baf.js.map": "/redax-phonebook/static/js/main.644d7baf.js.map",
     "485.a66186c9.chunk.js.map": "/redax-phonebook/static/js/485.a66186c9.chunk.js.map",
-    "981.7554f2c0.chunk.js.map": "/redax-phonebook/static/js/981.7554f2c0.chunk.js.map",
-    "886.7d639f44.chunk.js.map": "/redax-phonebook/static/js/886.7d639f44.chunk.js.map",
-    "613.63094d33.chunk.js.map": "/redax-phonebook/static/js/613.63094d33.chunk.js.map",
+    "981.6818e8eb.chunk.js.map": "/redax-phonebook/static/js/981.6818e8eb.chunk.js.map",
+    "886.529caadd.chunk.js.map": "/redax-phonebook/static/js/886.529caadd.chunk.js.map",
+    "613.28f49ae4.chunk.js.map": "/redax-phonebook/static/js/613.28f49ae4.chunk.js.map",
     "718.c1d6332b.chunk.js.map": "/redax-phonebook/static/js/718.c1d6332b.chunk.js.map",
     "568.4951a2b8.chunk.js.map": "/redax-phonebook/static/js/568.4951a2b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5b8d107c.css",
-    "static/js/main.84beb023.js"
+    "static/css/main.6a9f8af6.css",
+    "static/js/main.644d7baf.js"
   ]
 }
