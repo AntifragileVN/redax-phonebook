@@ -1,10 +1,17 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-	max-width: 560px;
 	padding: 0 15px;
 	margin-left: auto;
 	margin-right: auto;
+
+	@media screen and (max-width: 967px) {
+		max-width: 560px;
+	}
+
+	@media screen and (min-width: 968px) {
+		width: 900px;
+	}
 `;
 
 export const Section = styled.section`

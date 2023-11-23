@@ -5,12 +5,15 @@ export const FormStyled = styled(Form)`
 	background: #212832;
 `;
 
-export const FieldWrapper = styled.div`
+export const InputWrapper = styled.div`
 	background: #455a64;
 	position: relative;
 	display: flex;
 	align-items: center;
-	margin-bottom: 25px;
+`;
+
+export const FieldWrapper = styled.div`
+	padding-bottom: 20px;
 `;
 
 export const Label = styled.label`

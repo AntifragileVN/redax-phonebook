@@ -1,10 +1,16 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { getContacts } from '../../redax/contacts/selectors';
+import { selectContacts } from 'redax/contacts/selectors';
 import { addContact } from 'redax/contacts/operations';
 
 import { Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { FormStyled, FieldWrapper, Label, ContactInput } from './Phonebook.styled';
+import {
+	FormStyled,
+	FieldWrapper,
+	InputWrapper,
+	Label,
+	ContactInput,
+} from './Phonebook.styled';
 
 import { Button } from 'Components/Button/Button';
 import { UserIcon, PhoneIcon } from 'Components/Form/Form.styled';
@@ -36,7 +42,7 @@ const schema = Yup.object().shape({
 });
 
 export const Phonebook = () => {
-	const contacts = useSelector(getContacts);
+	const contacts = useSelector(selectContacts);
 	const dispatch = useDispatch();
 
 	const handleSubmit = (newContact, { resetForm }) => {
@@ -60,9 +66,9 @@ export const Phonebook = () => {
 			onSubmit={handleSubmit}
 		>
 			<FormStyled>
-				<div>
+				<FieldWrapper>
 					<Label htmlFor="name">Name</Label>
-					<FieldWrapper>
+					<InputWrapper>
 						<UserIcon />
 						<ContactInput
 							type="text"
@@ -70,22 +76,22 @@ export const Phonebook = () => {
 							autoComplete="off"
 							placeholder="Tom Jhonson"
 						/>
-					</FieldWrapper>
+					</InputWrapper>
 					<ErrorMessage name={'name'}></ErrorMessage>
-				</div>
+				</FieldWrapper>
 
-				<div>
+				<FieldWrapper>
 					<Label htmlFor="number">Telephone</Label>
-					<FieldWrapper>
+					<InputWrapper>
 						<PhoneIcon />
 						<ContactInput
 							type="tel"
 							name="number"
 							placeholder="+28023456724"
 						/>
-					</FieldWrapper>
+					</InputWrapper>
 					<ErrorMessage name={'number'}></ErrorMessage>
-				</div>
+				</FieldWrapper>
 
 				<Button type="submit">Add contact</Button>
 			</FormStyled>

@@ -6,6 +6,10 @@ export const Menu = styled.nav`
 	align-items: center;
 `;
 
+export const UserName = styled.p`
+	margin-right: 15px;
+`;
+
 export const StyledLink = styled(NavLink)`
 	display: inline-block;
 	text-decoration: none;
