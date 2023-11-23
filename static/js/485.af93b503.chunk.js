@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkreact_hw_02_phonebook=self.webpackChunkreact_hw_02_phonebook||[]).push([[485],{3485:function(e,n,t){t.r(n),t.d(n,{default:function(){return o}});var c,h=t(168),r=t(5867).ZP.div(c||(c=(0,h.Z)(["\n\tdisplay: flex;\n\theight: 80vh;\n\talign-items: center;\n\tjustify-content: center;\n"]))),i=t(184),o=function(){return(0,i.jsx)(r,{children:(0,i.jsx)("h1",{children:"Contacts app welcome page \u2601\ufe0f"})})}}}]);
-//# sourceMappingURL=485.af93b503.chunk.js.map
