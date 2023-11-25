@@ -3,7 +3,7 @@ import { RiDeleteBin5Line } from 'react-icons/ri';
 
 export const StyledButton = styled.button`
 	width: 100%;
-	padding: 10px 15px;
+	padding: 5px 15px;
 
 	border: none;
 
