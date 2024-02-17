@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/redax-phonebook/static/css/main.6a9f8af6.css",
-    "main.js": "/redax-phonebook/static/js/main.5c578bba.js",
+    "main.js": "/redax-phonebook/static/js/main.24323d9d.js",
     "static/js/485.a66186c9.chunk.js": "/redax-phonebook/static/js/485.a66186c9.chunk.js",
     "static/js/981.6818e8eb.chunk.js": "/redax-phonebook/static/js/981.6818e8eb.chunk.js",
     "static/js/886.529caadd.chunk.js": "/redax-phonebook/static/js/886.529caadd.chunk.js",
-    "static/js/613.473b02e8.chunk.js": "/redax-phonebook/static/js/613.473b02e8.chunk.js",
+    "static/js/613.346dafea.chunk.js": "/redax-phonebook/static/js/613.346dafea.chunk.js",
     "static/js/718.c1d6332b.chunk.js": "/redax-phonebook/static/js/718.c1d6332b.chunk.js",
-    "static/js/393.4f319993.chunk.js": "/redax-phonebook/static/js/393.4f319993.chunk.js",
+    "static/js/15.b371feb4.chunk.js": "/redax-phonebook/static/js/15.b371feb4.chunk.js",
     "index.html": "/redax-phonebook/index.html",
     "main.6a9f8af6.css.map": "/redax-phonebook/static/css/main.6a9f8af6.css.map",
-    "main.5c578bba.js.map": "/redax-phonebook/static/js/main.5c578bba.js.map",
+    "main.24323d9d.js.map": "/redax-phonebook/static/js/main.24323d9d.js.map",
     "485.a66186c9.chunk.js.map": "/redax-phonebook/static/js/485.a66186c9.chunk.js.map",
     "981.6818e8eb.chunk.js.map": "/redax-phonebook/static/js/981.6818e8eb.chunk.js.map",
     "886.529caadd.chunk.js.map": "/redax-phonebook/static/js/886.529caadd.chunk.js.map",
-    "613.473b02e8.chunk.js.map": "/redax-phonebook/static/js/613.473b02e8.chunk.js.map",
+    "613.346dafea.chunk.js.map": "/redax-phonebook/static/js/613.346dafea.chunk.js.map",
     "718.c1d6332b.chunk.js.map": "/redax-phonebook/static/js/718.c1d6332b.chunk.js.map",
-    "393.4f319993.chunk.js.map": "/redax-phonebook/static/js/393.4f319993.chunk.js.map"
+    "15.b371feb4.chunk.js.map": "/redax-phonebook/static/js/15.b371feb4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6a9f8af6.css",
-    "static/js/main.5c578bba.js"
+    "static/js/main.24323d9d.js"
   ]
 }
