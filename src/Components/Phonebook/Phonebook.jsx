@@ -66,6 +66,7 @@ export const Phonebook = () => {
 		}
 
 		dispatch(addContact(newContact));
+		toast.success(`New contact ${newContact.name} created!`);
 		resetForm();
 	};
 

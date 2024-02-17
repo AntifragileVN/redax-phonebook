@@ -1,35 +1,27 @@
 import { ContactItem } from './ContactItem/ContactItem';
 import { List } from './ContactList.styled';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectContacts, selectIsLoading } from '../../redax/contacts/selectors';
-import { fetchContacts } from 'redax/contacts/operations';
-import { useEffect } from 'react';
+import { Transition } from 'react-transition-group';
 
-export function ContactList({ filter }) {
-	const dispatch = useDispatch();
-
-	useEffect(() => {
-		dispatch(fetchContacts());
-	}, [dispatch]);
-
-	const isLoading = useSelector(selectIsLoading);
-	const contacts = useSelector(selectContacts);
-
+export function ContactList({ filter, contacts }) {
 	const filteredContacts = contacts.filter((contact) =>
 		contact.name.toLowerCase().includes(filter)
 	);
 
 	return (
 		<>
-			{isLoading && <h1>Whate a bit</h1>}
-			<List>
+			<List component="ul">
 				{filteredContacts.map(({ id, name, number }) => (
-					<ContactItem
-						key={id}
-						id={id}
-						name={name}
-						number={number}
-					></ContactItem>
+					<Transition timeout={500} mountOnEnter unmountOnExit>
+						{(state) => (
+							<ContactItem
+								key={id}
+								id={id}
+								name={name}
+								number={number}
+								state={state}
+							/>
+						)}
+					</Transition>
 				))}
 			</List>
 		</>

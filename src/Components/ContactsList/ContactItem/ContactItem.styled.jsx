@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ListItem = styled.li`
+const BaseListItem = styled.li`
 	position: relative;
 	background: #263238;
 	display: flex;
@@ -21,6 +21,12 @@ const ListItem = styled.li`
 		background: #fed36a;
 	}
 `;
+
+const ListItem = styled(BaseListItem)`
+	transition: opacity 500ms;
+	opacity: ${({ state }) => (state === 'entered' || state === 'entering' ? 1 : 0)};
+`;
+
 export const ItemInfo = styled.div`
 	padding: 15px 20px;
 `;

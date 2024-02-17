@@ -1,15 +1,15 @@
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { deleteContact } from 'redax/contacts/operations';
 import PropTypes from 'prop-types';
 
 import { ListItem, ItemInfo, PersonName, PhoneNumber } from './ContactItem.styled';
-import { useDispatch } from 'react-redux';
-import { deleteContact } from 'redax/contacts/operations';
 
 import { Button } from 'Components/Button/Button';
 import { RiDeleteBin5Line } from 'react-icons/ri';
 
 import { TailSpin } from 'react-loader-spinner';
-import { useState } from 'react';
-export function ContactItem({ name, number, id }) {
+export function ContactItem({ name, number, id, state }) {
 	const dispatch = useDispatch();
 	const [isDeleting, setIsDeleting] = useState(false);
 
@@ -19,7 +19,7 @@ export function ContactItem({ name, number, id }) {
 	};
 
 	return (
-		<ListItem>
+		<ListItem state={state}>
 			<ItemInfo>
 				<PersonName>{name}</PersonName>
 				<PhoneNumber>{number}</PhoneNumber>
