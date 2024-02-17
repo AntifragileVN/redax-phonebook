@@ -1,7 +1,7 @@
 {
 	"name": "redax-phonebook",
 	"version": "0.1.0",
-	"homepage": "https://MentoMorii.github.io/redax-phonebook",
+	"homepage": "https://AntifragileVN.github.io/redax-phonebook",
 	"private": true,
 	"dependencies": {
 		"@reduxjs/toolkit": "^1.9.7",
